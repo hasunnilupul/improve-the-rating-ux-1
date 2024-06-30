@@ -4,15 +4,26 @@
 
 
 .app {
-    @apply max-w-full flex items-center justify-center h-screen mx-auto;
+    @apply max-w-full flex items-center justify-center mx-auto;
 }
 
 .movie-list {
-    @apply flex items-center justify-center space-x-4;
+    @apply flex items-center justify-center space-x-4 p-4;
 }
 
 .movie-item {
-    @apply w-96 h-auto bg-white rounded-md flex flex-col items-center justify-start overflow-hidden shadow-2xl;
+    @apply relative w-96 h-auto bg-white rounded-md flex flex-col items-center justify-start overflow-hidden shadow-2xl;
+}
+
+.movie-item-rating-overlay {
+    @apply absolute top-3 right-3 z-10 flex items-center;
+}
+.movie-item-rating-overlay > .icon {
+    @apply relative w-10 h-10 text-yellow-500;
+}
+
+.movie-item-rating-overlay > .rating {
+    @apply absolute top-1/2 right-1/2 transform -translate-y-1/2 translate-x-1/2 text-base font-medium text-yellow-700 pr-0.5 pt-0.5;
 }
 
 .movie-item-image-wrapper {
